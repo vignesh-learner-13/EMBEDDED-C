@@ -40,15 +40,15 @@ void main()
 {
 while(1)
 {
-lcdcmd(0x38);
+lcdcmd(0x38);// take 2 lines 
 delay(10);
-lcdcmd(0x01);
+lcdcmd(0x01);//clear the screen
 delay(10);
-lcdcmd(0x10);
+lcdcmd(0x10);//cursor on
 delay(10);
-lcdcmd(0x0c);
+lcdcmd(0x0c);//display on 
 delay(10);
-lcdcmd(0x81);
+lcdcmd(0x81);//go to second line 
 delay(10);
 data('h');
 delay(10);
@@ -64,7 +64,7 @@ data('o');
 delay(10);
 data('o');
 delay(10);
-lcdcmd(0xc0);
+lcdcmd(0xc0);// go to second line 
 lcd_string("hi");
 }
 }
