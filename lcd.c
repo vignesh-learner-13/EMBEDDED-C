@@ -5,6 +5,13 @@
 void lcdcmd(unsigned char cmd);
 void data(unsigned char dat);
 void delay(int n);
+void lcd_string(char *s);
+void lcd_string(char *s)
+{
+    while(*s) {
+       data(*s++);
+     }
+}
 void delay(int n)
 {
 int i;
@@ -57,6 +64,8 @@ data('o');
 delay(10);
 data('o');
 delay(10);
+lcdcmd(0xc0);
+lcd_string("hi");
 }
 }
 
